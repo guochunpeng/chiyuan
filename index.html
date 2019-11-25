@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>贵州驰远律师事务所</title>
+</head>
+
+<link rel="stylesheet" href="css/bootstrap.min.css"/>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<style>
+
+    .calc-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .p-0 {
+        padding: 0 !important;
+    }
+
+    .mt-15 {
+        margin-top: 15px !important;
+    }
+
+
+    .rel {
+        position: relative;
+    }
+
+    .form-control {
+        box-shadow: none;
+    }
+
+    .calc-addon {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 center;
+    }
+
+    .calc-label {
+        font-size: 14px;
+        line-height: 34px;
+        text-align: right;
+    }
+
+    .reset {
+        background: #666 none repeat scroll 0 0;
+        border: 0 none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "微软雅黑";
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 30px;
+        outline: 0 none;
+        text-align: center;
+        width: 90px;
+    }
+
+    .sub {
+        background: #53a0e3 none repeat scroll 0 0;
+        border: 0 none;
+        border-radius: 3px;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: "微软雅黑";
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        margin-top: 30px;
+        outline: 0 none;
+        text-align: center;
+        width: 90px;
+    }
+</style>
+<body>
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header bb-no">
+        </div>
+        <div class="modal-body">
+            <div class="">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title calc-title rel">
+                            贵州驰远律所收费标准
+                        </h3>
+                    </div>
+                    <div class="panel-body p-0">
+                        <div class="calc-bd-tabs jCalcBdTabs">
+                            <div class="cal-bd-tab jCalBdTab">
+                                <div class="row mt-15">
+                                    <div class="col-md-6">
+                                        <div class="col-xs-4 calc-label">标的额</div>
+                                        <div class="col-xs-8">
+                                            <div class="input-group">
+                                                <input type="text" name="jkje" id="jkje" placeholder="标的额"
+                                                       class="form-control" style="width: 125px;"/>
+                                                <div class="input-group-addon calc-addon">元</div>
+                                            </div>
+                                            <span id="bigAmount"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="row mt-15">
+                                    <div class="col-md-12 tc" style="margin-top:-20px;margin-bottom: 20px;">
+                                        <div class="col-xs-6 tc" style="text-align: center;">
+                                            <input type="button" value="计算" class="sub " id="btn-profit"/>
+                                        </div>
+                                        <div class="col-xs-6 tc" style="text-align: center;">
+                                            <input type="button" value="重置数据" class="reset" id="btn-reset"/>
+                                            <span id="expect-profit"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cal-bd-tab hidden jCalBdTab">
+                        </div>
+                    </div>
+                    <div class="calc-tps mt-20 text-center"><strong></strong></div>
+                    <br/>
+                    <div class="table-responsive"></div>
+                    <div >
+                        <table class="table" align="center" id="fee_detail">
+                            <thead>
+                            <tr style="height: 40px;" align="center">
+                                <th width="33%"  style="margin: 0 auto;text-align: center">代理费</th>
+                                <th width="33%"  style="margin: 0 auto;text-align: center">诉讼费</th>
+                                <th width="33%"  style="margin: 0 auto;text-align: center">保全费</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    document.addEventListener('plusready', function () {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                docEl.style.fontSize = 100 * (clientWidth / 1080) + 'px';
+            };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    });
+</script>
+</body>
+</html>
